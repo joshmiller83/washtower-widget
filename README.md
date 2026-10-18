@@ -26,9 +26,11 @@ The app talks only to LG's API (`api-{aic,eic,kic}.lgthinq.com`). Nothing else i
 3. Select only **Permission to view all devices** and **Permission to view all device statuses**. The app never controls your appliances.
 4. Choose **CREATE TOKEN** and copy it.
 
-### 2. Build
+### 2. Download or build
 
-You'll need Xcode 26 or later and an Apple ID signed in to Xcode. The free Personal Team works.
+The quickest option is to download `WashTower-Widget.zip` from the [latest release](https://github.com/joshmiller83/washtower-widget/releases/latest) and skip to step 3.
+
+To build it yourself, you'll need Xcode 26 or later and an Apple ID signed in to Xcode. The free Personal Team works.
 
 ```bash
 git clone https://github.com/joshmiller83/washtower-widget.git
