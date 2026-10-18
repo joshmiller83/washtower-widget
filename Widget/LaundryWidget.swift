@@ -229,7 +229,8 @@ struct DrumDetail: View {
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
                 Spacer(minLength: 0)
-                if showsRefresh { RefreshButton() }
+                // Keep the button's space in every column so side-by-side headers line up.
+                if showsRefresh { RefreshButton() } else { RefreshButton().hidden() }
             }
             .font(.subheadline.weight(.semibold))
 
