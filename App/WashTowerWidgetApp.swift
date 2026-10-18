@@ -26,13 +26,13 @@ struct MenuBarLabel: View {
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
-        // The label is rebuilt whenever the model's snapshot changes (every poll while running).
-        let text = showCountdown ? model.menuBarText(at: Date()) : nil
-        Group {
+        // Reading model.now re-renders the label as the clock ticks. A Label would be drawn
+        // icon-only in the menu bar, so build the image and text separately.
+        let text = showCountdown ? model.menuBarText(at: model.now) : nil
+        HStack(spacing: 4) {
+            Image(systemName: "washer")
             if let text {
-                Label(text, systemImage: "washer")
-            } else {
-                Image(systemName: "washer")
+                Text(text).monospacedDigit()
             }
         }
         .task {

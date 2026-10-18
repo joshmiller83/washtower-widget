@@ -20,10 +20,11 @@ extension DrumKind {
 
 extension DrumStatus {
     /// "1:05" style hours:minutes left, counted from `now`. Nil when no timer is running.
+    /// Rounds down, so it reads the same as the hours:minutes of the widget's live timer.
     func remainingText(at now: Date = Date()) -> String? {
         let minutes: Int
         if let end = endDate {
-            minutes = max(0, Int((end.timeIntervalSince(now) / 60).rounded(.up)))
+            minutes = max(0, Int(end.timeIntervalSince(now) / 60))
         } else if phase == .paused, let remaining = remainingMinutes {
             minutes = remaining
         } else {

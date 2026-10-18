@@ -11,11 +11,20 @@ final class LaundryModel {
     private(set) var lastError: String?
     private(set) var isRefreshing = false
     private(set) var hasToken = SharedStore.token != nil
+    /// Ticks every few seconds so the menu bar countdown moves between polls.
+    private(set) var now = Date()
 
     private var pollTask: Task<Void, Never>?
+    private var clockTask: Task<Void, Never>?
 
     init() {
         startPolling()
+        clockTask = Task { [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(5))
+                self?.now = Date()
+            }
+        }
         NSWorkspace.shared.notificationCenter.addObserver(
             forName: NSWorkspace.didWakeNotification, object: nil, queue: .main
         ) { [weak self] _ in
