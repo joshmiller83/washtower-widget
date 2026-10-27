@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- washtower-relay. System daemon: starts at boot, before anyone logs in, runs as
+     __SERVICE_USER__ (not root), listens only on __HOST__:__PORT__, and is restarted
+     by launchd whenever it exits (deploy/update.sh relies on that). Rendered by
+     deploy/install-service.sh from deploy/config.env. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>__LABEL__</string>
+  <key>UserName</key>
+  <string>__SERVICE_USER__</string>
+  <key>GroupName</key>
+  <string>staff</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>__BIN__</string>
+    <string>serve</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>__DATA_DIR__</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>WT_DATA_DIR</key>
+    <string>__DATA_DIR__</string>
+    <key>WT_HOST</key>
+    <string>__HOST__</string>
+    <key>WT_PORT</key>
+    <string>__PORT__</string>
+    <key>WT_THINQ_TOKEN_FILE</key>
+    <string>__THINQ_TOKEN_FILE__</string>
+    <key>WT_COUNTRY</key>
+    <string>__COUNTRY__</string>
+    <key>WT_APNS_KEY_FILE</key>
+    <string>__APNS_KEY_FILE__</string>
+    <key>WT_APNS_KEY_ID</key>
+    <string>__APNS_KEY_ID__</string>
+    <key>WT_APNS_TEAM_ID</key>
+    <string>__APNS_TEAM_ID__</string>
+    <key>WT_APNS_BUNDLE_ID</key>
+    <string>__APNS_BUNDLE_ID__</string>
+    <key>WT_APNS_ENV</key>
+    <string>__APNS_ENV__</string>
+    <key>WT_DISMISS_AFTER_MINUTES</key>
+    <string>__DISMISS_AFTER_MINUTES__</string>
+    <key>HOME</key>
+    <string>/Users/__SERVICE_USER__</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>5</integer>
+
+  <key>StandardOutPath</key>
+  <string>__LOG_FILE__</string>
+  <key>StandardErrorPath</key>
+  <string>__LOG_FILE__</string>
+</dict>
+</plist>

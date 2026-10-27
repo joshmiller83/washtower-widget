@@ -5,3 +5,14 @@ build/
 dist/
 Config/Local.xcconfig
 *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+Config/device.env
+
+# Relay (SwiftPM build output)
+.build/
+.swiftpm/
+
+# Relay deploy settings for this Mac (copy deploy/config.env.example)
+deploy/config.env
+
+# Secrets: APNs auth keys
+*.p8

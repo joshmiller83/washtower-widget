@@ -7,28 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08DD04BE2A2AC8D05024EE7A /* DrumViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57891FD44BCAF24EE34F7A9 /* DrumViews.swift */; };
+		09170E447DA0785328A48277 /* LiveActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C969AC3C32FC1D8F78868 /* LiveActivityState.swift */; };
+		0DFDFC9BA674B1F23433520E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D94CB2D2CFB1984D7F9456 /* AppModel.swift */; };
+		1BC1E077FF54A7BC74E49ADD /* LaundryActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA47F0606C546B41E5A1CBB /* LaundryActivityAttributes.swift */; };
+		1E5922E55194E8E782ADA634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E88FDCD3E432C5B0D7843E /* Assets.xcassets */; };
 		22AE5D09D1892C5DDD9912BB /* LaundryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79635B82A5F6CE9C7CBE26 /* LaundryModels.swift */; };
+		257EB735F6EFE9BD2FF5477F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A99BD9C1BEB5ECF16F122B /* ContentView.swift */; };
+		2B898FD2492915792922F6AA /* DrumViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57891FD44BCAF24EE34F7A9 /* DrumViews.swift */; };
+		33FFE0994396234256D4A5FA /* LaundryActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA47F0606C546B41E5A1CBB /* LaundryActivityAttributes.swift */; };
+		43CC26C00504F220F270883C /* LiveActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C969AC3C32FC1D8F78868 /* LiveActivityState.swift */; };
 		4B1DAB20DB6AED41E4270112 /* DrumStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2668F94B6BABF8FBDA35F9F8 /* DrumStyle.swift */; };
+		4D1D8A44B0E595503818A255 /* LiveActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C969AC3C32FC1D8F78868 /* LiveActivityState.swift */; };
 		53211826F6B301F617F8A23F /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBAABCB647BBEC0E92D4DE /* SharedStore.swift */; };
+		55E3DC2B2F4327106164D37D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29A68118E3A612B091E56E0 /* SwiftUI.framework */; };
 		5AA8789BCBFC24ED9B7996D2 /* LaundryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79635B82A5F6CE9C7CBE26 /* LaundryModels.swift */; };
+		5E4E55B24AED9D7C7C42EC8A /* LiveActivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C969AC3C32FC1D8F78868 /* LiveActivityState.swift */; };
+		60D6604A1EC00BA2C6C7AC84 /* RelayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071A5E33C6FFF5BD7BE3503 /* RelayClient.swift */; };
+		660EB8C20C9EDAF993030ED6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60726F62D5AA5E893FCF589B /* WidgetKit.framework */; };
 		7163D2FF6823D211F66A485E /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BBAABCB647BBEC0E92D4DE /* SharedStore.swift */; };
 		89F0B2C7A8B8C85A8C88B490 /* DrumStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2668F94B6BABF8FBDA35F9F8 /* DrumStyle.swift */; };
+		8A64501BC3CB3DACDF6A7276 /* WashTowerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72086914638C658EDF313018 /* WashTowerApp.swift */; };
 		8F778D42CFDB98F72C8DAD44 /* ThinQRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3EB895B3EF32088DF8977 /* ThinQRegion.swift */; };
 		9A761FDF7E40530C42B83066 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60726F62D5AA5E893FCF589B /* WidgetKit.framework */; };
 		9E9DE416C7568918A97C49B2 /* WashTowerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0E8DDC2DB24DD14E53B1CA30 /* WashTowerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3786B68C8405C27E1FEED7F /* ThinQClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5587A9E8051ED3622EAC8A0 /* ThinQClient.swift */; };
+		A428DDD1758A8E63EBBD77AD /* DrumStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2668F94B6BABF8FBDA35F9F8 /* DrumStyle.swift */; };
+		A4B5F92B38F1F694FA42C9F7 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23BFC640FFCEB0C8D717656 /* ActivityKit.framework */; };
+		AB40E9837D0225461BD99FD3 /* WashTowerLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E918F618F180A7FE12AA416F /* WashTowerLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AC6E779F21B3EB56087100D6 /* LaundryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F665E95B3D879E7D752A5 /* LaundryWidget.swift */; };
 		AF6DF0447F4A86E5D99A42FD /* WashTowerWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631CF1E7FF21D8DFFC7D0DEC /* WashTowerWidgetApp.swift */; };
+		C0B0E6CC03DA1EFFE091C8E5 /* DrumStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2668F94B6BABF8FBDA35F9F8 /* DrumStyle.swift */; };
 		C1A28DE1CA399B256766686D /* ThinQRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3EB895B3EF32088DF8977 /* ThinQRegion.swift */; };
 		C2D0FE24DCE7AABD460AA478 /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6136F5D9F21187C2CCBA398 /* MenuContentView.swift */; };
 		C682B15BEE776754DA3F3175 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C1B197DD3918EAEC4519C7 /* SettingsView.swift */; };
 		CA480C766AD75F81C7A9E0BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5526689C079BC85801CCBFE /* Assets.xcassets */; };
 		CAE9EEDEE5E5A8955C8C5637 /* ThinQClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5587A9E8051ED3622EAC8A0 /* ThinQClient.swift */; };
+		CCED2B0680C82E89B8B4C5CA /* LaundryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79635B82A5F6CE9C7CBE26 /* LaundryModels.swift */; };
+		D6C671594E30A7B96EC5105B /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2902F028032C4CAC1B9B035 /* LiveActivityManager.swift */; };
 		D71B2589F3CDF7D0AB900E00 /* LaundryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3317850E13D0BD213F433B /* LaundryModel.swift */; };
+		F48FE23BE439E6BEFB8CF83D /* LaundryLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21832A174F42997DFE0D6B /* LaundryLiveActivity.swift */; };
+		F7F83B6752A5A64AF0F9BF1B /* LaundryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79635B82A5F6CE9C7CBE26 /* LaundryModels.swift */; };
 		FA169879F521BACED1835ACE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29A68118E3A612B091E56E0 /* SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		15A22DCBD20A52F6DAAD1139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A97639F9DC510EA2278C63B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE8DD32476A1A7ADC264D19A;
+			remoteInfo = WashTowerLiveActivity;
+		};
 		CE2A713EFEE4B5B206447873 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A97639F9DC510EA2278C63B /* Project object */;
@@ -39,6 +69,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3A97BB1C79E07A6260C19570 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AB40E9837D0225461BD99FD3 /* WashTowerLiveActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E1086173C7B4A7F8AD371A /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,25 +95,41 @@
 
 /* Begin PBXFileReference section */
 		07BBAABCB647BBEC0E92D4DE /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		0C1C969AC3C32FC1D8F78868 /* LiveActivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityState.swift; sourceTree = "<group>"; };
 		0E8DDC2DB24DD14E53B1CA30 /* WashTowerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WashTowerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2668F94B6BABF8FBDA35F9F8 /* DrumStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumStyle.swift; sourceTree = "<group>"; };
 		3A79635B82A5F6CE9C7CBE26 /* LaundryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryModels.swift; sourceTree = "<group>"; };
+		4071A5E33C6FFF5BD7BE3503 /* RelayClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayClient.swift; sourceTree = "<group>"; };
+		4419B98BBDB478E06B509398 /* WashTower.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WashTower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A064D5D1ECE8CAF5D73C1BA /* WashTowerWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WashTowerWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60726F62D5AA5E893FCF589B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		631CF1E7FF21D8DFFC7D0DEC /* WashTowerWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashTowerWidgetApp.swift; sourceTree = "<group>"; };
+		72086914638C658EDF313018 /* WashTowerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashTowerApp.swift; sourceTree = "<group>"; };
 		74C1B197DD3918EAEC4519C7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		766FF30E5ECE45377D49E05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		79AF20D4FCB6EDC0F7391068 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		7A1F665E95B3D879E7D752A5 /* LaundryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryWidget.swift; sourceTree = "<group>"; };
+		81D94CB2D2CFB1984D7F9456 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		99A3EB895B3EF32088DF8977 /* ThinQRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinQRegion.swift; sourceTree = "<group>"; };
+		9F21832A174F42997DFE0D6B /* LaundryLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryLiveActivity.swift; sourceTree = "<group>"; };
+		A2902F028032C4CAC1B9B035 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		A29A68118E3A612B091E56E0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A2E88FDCD3E432C5B0D7843E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E0AD1977F5A1079028962D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3BCDC25AF8C54520646519A /* WashTower.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WashTower.entitlements; sourceTree = "<group>"; };
+		B57891FD44BCAF24EE34F7A9 /* DrumViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumViews.swift; sourceTree = "<group>"; };
+		B7A99BD9C1BEB5ECF16F122B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B81D2F13F0612AA6006F7C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BF3317850E13D0BD213F433B /* LaundryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryModel.swift; sourceTree = "<group>"; };
+		C23BFC640FFCEB0C8D717656 /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = System/Library/Frameworks/ActivityKit.framework; sourceTree = SDKROOT; };
 		CBFE0A52F1EC8B48790F6D57 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		D5587A9E8051ED3622EAC8A0 /* ThinQClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinQClient.swift; sourceTree = "<group>"; };
 		E18C641862AB6049F885972A /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		E6136F5D9F21187C2CCBA398 /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
+		E918F618F180A7FE12AA416F /* WashTowerLiveActivity.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = WashTowerLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279039396EDF32E501C4071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F5526689C079BC85801CCBFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCA47F0606C546B41E5A1CBB /* LaundryActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryActivityAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +139,16 @@
 			files = (
 				9A761FDF7E40530C42B83066 /* WidgetKit.framework in Frameworks */,
 				FA169879F521BACED1835ACE /* SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AA72DB9F58DFEF78886E9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660EB8C20C9EDAF993030ED6 /* WidgetKit.framework in Frameworks */,
+				55E3DC2B2F4327106164D37D /* SwiftUI.framework in Frameworks */,
+				A4B5F92B38F1F694FA42C9F7 /* ActivityKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +168,36 @@
 		15A729C54EFA0F4FD1D2F1D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				4419B98BBDB478E06B509398 /* WashTower.app */,
+				E918F618F180A7FE12AA416F /* WashTowerLiveActivity.appex */,
 				4A064D5D1ECE8CAF5D73C1BA /* WashTowerWidget.app */,
 				0E8DDC2DB24DD14E53B1CA30 /* WashTowerWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6EB8C7C549A1D2B3E79B4F77 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B57891FD44BCAF24EE34F7A9 /* DrumViews.swift */,
+				FCA47F0606C546B41E5A1CBB /* LaundryActivityAttributes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7FE39C05C3BD28B7FEC78B34 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				81D94CB2D2CFB1984D7F9456 /* AppModel.swift */,
+				A2E88FDCD3E432C5B0D7843E /* Assets.xcassets */,
+				B7A99BD9C1BEB5ECF16F122B /* ContentView.swift */,
+				B81D2F13F0612AA6006F7C42 /* Info.plist */,
+				A2902F028032C4CAC1B9B035 /* LiveActivityManager.swift */,
+				4071A5E33C6FFF5BD7BE3503 /* RelayClient.swift */,
+				B3BCDC25AF8C54520646519A /* WashTower.entitlements */,
+				72086914638C658EDF313018 /* WashTowerApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		85F88375440147B7BE798BC7 /* Config */ = {
@@ -120,6 +213,7 @@
 			children = (
 				BD05980C3FB191FB764D033A /* App */,
 				85F88375440147B7BE798BC7 /* Config */,
+				F298FCEE870C8FDE89794A2D /* iOS */,
 				F67EF65641C29956F0C48289 /* Shared */,
 				0549C8ED28982FCE476D355B /* Widget */,
 				E458703024F6A57D556DAF32 /* Frameworks */,
@@ -141,13 +235,33 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		D23509158DD64D96D30A9FEC /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				766FF30E5ECE45377D49E05D /* Info.plist */,
+				9F21832A174F42997DFE0D6B /* LaundryLiveActivity.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
 		E458703024F6A57D556DAF32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C23BFC640FFCEB0C8D717656 /* ActivityKit.framework */,
 				A29A68118E3A612B091E56E0 /* SwiftUI.framework */,
 				60726F62D5AA5E893FCF589B /* WidgetKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F298FCEE870C8FDE89794A2D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7FE39C05C3BD28B7FEC78B34 /* App */,
+				D23509158DD64D96D30A9FEC /* LiveActivity */,
+				6EB8C7C549A1D2B3E79B4F77 /* Shared */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		F67EF65641C29956F0C48289 /* Shared */ = {
@@ -155,6 +269,7 @@
 			children = (
 				2668F94B6BABF8FBDA35F9F8 /* DrumStyle.swift */,
 				3A79635B82A5F6CE9C7CBE26 /* LaundryModels.swift */,
+				0C1C969AC3C32FC1D8F78868 /* LiveActivityState.swift */,
 				07BBAABCB647BBEC0E92D4DE /* SharedStore.swift */,
 				D5587A9E8051ED3622EAC8A0 /* ThinQClient.swift */,
 				99A3EB895B3EF32088DF8977 /* ThinQRegion.swift */,
@@ -165,6 +280,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		929E2F6E47783B559719F07F /* WashTower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E451D6B4C9C279BC91D1CA57 /* Build configuration list for PBXNativeTarget "WashTower" */;
+			buildPhases = (
+				97FBCCDD9B380617BFB22670 /* Sources */,
+				D57535269ECD3D830D5FB66E /* Resources */,
+				3A97BB1C79E07A6260C19570 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7A6862D638BAEFB9A0AF5FA /* PBXTargetDependency */,
+			);
+			name = WashTower;
+			packageProductDependencies = (
+			);
+			productName = WashTower;
+			productReference = 4419B98BBDB478E06B509398 /* WashTower.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B569533D3CC7762D0F30BBE5 /* WashTowerWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1689410017D358405AE0070 /* Build configuration list for PBXNativeTarget "WashTowerWidget" */;
@@ -203,6 +338,24 @@
 			productReference = 0E8DDC2DB24DD14E53B1CA30 /* WashTowerWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		EE8DD32476A1A7ADC264D19A /* WashTowerLiveActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F7F30C84F4FA5CC419E7ECB /* Build configuration list for PBXNativeTarget "WashTowerLiveActivity" */;
+			buildPhases = (
+				90AE21C8BEE55B613B9ED88C /* Sources */,
+				88AA72DB9F58DFEF78886E9A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WashTowerLiveActivity;
+			packageProductDependencies = (
+			);
+			productName = WashTowerLiveActivity;
+			productReference = E918F618F180A7FE12AA416F /* WashTowerLiveActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,11 +365,19 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					929E2F6E47783B559719F07F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 					B569533D3CC7762D0F30BBE5 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 					E586CE9D18F4B37137300F01 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					EE8DD32476A1A7ADC264D19A = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
@@ -238,6 +399,8 @@
 			targets = (
 				B569533D3CC7762D0F30BBE5 /* WashTowerWidget */,
 				E586CE9D18F4B37137300F01 /* WashTowerWidgetExtension */,
+				929E2F6E47783B559719F07F /* WashTower */,
+				EE8DD32476A1A7ADC264D19A /* WashTowerLiveActivity */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +414,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D57535269ECD3D830D5FB66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E5922E55194E8E782ADA634 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -261,9 +432,40 @@
 				89F0B2C7A8B8C85A8C88B490 /* DrumStyle.swift in Sources */,
 				22AE5D09D1892C5DDD9912BB /* LaundryModels.swift in Sources */,
 				AC6E779F21B3EB56087100D6 /* LaundryWidget.swift in Sources */,
+				5E4E55B24AED9D7C7C42EC8A /* LiveActivityState.swift in Sources */,
 				53211826F6B301F617F8A23F /* SharedStore.swift in Sources */,
 				CAE9EEDEE5E5A8955C8C5637 /* ThinQClient.swift in Sources */,
 				8F778D42CFDB98F72C8DAD44 /* ThinQRegion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90AE21C8BEE55B613B9ED88C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A428DDD1758A8E63EBBD77AD /* DrumStyle.swift in Sources */,
+				08DD04BE2A2AC8D05024EE7A /* DrumViews.swift in Sources */,
+				1BC1E077FF54A7BC74E49ADD /* LaundryActivityAttributes.swift in Sources */,
+				F48FE23BE439E6BEFB8CF83D /* LaundryLiveActivity.swift in Sources */,
+				F7F83B6752A5A64AF0F9BF1B /* LaundryModels.swift in Sources */,
+				4D1D8A44B0E595503818A255 /* LiveActivityState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97FBCCDD9B380617BFB22670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFDFC9BA674B1F23433520E /* AppModel.swift in Sources */,
+				257EB735F6EFE9BD2FF5477F /* ContentView.swift in Sources */,
+				C0B0E6CC03DA1EFFE091C8E5 /* DrumStyle.swift in Sources */,
+				2B898FD2492915792922F6AA /* DrumViews.swift in Sources */,
+				33FFE0994396234256D4A5FA /* LaundryActivityAttributes.swift in Sources */,
+				CCED2B0680C82E89B8B4C5CA /* LaundryModels.swift in Sources */,
+				D6C671594E30A7B96EC5105B /* LiveActivityManager.swift in Sources */,
+				09170E447DA0785328A48277 /* LiveActivityState.swift in Sources */,
+				60D6604A1EC00BA2C6C7AC84 /* RelayClient.swift in Sources */,
+				8A64501BC3CB3DACDF6A7276 /* WashTowerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +476,7 @@
 				4B1DAB20DB6AED41E4270112 /* DrumStyle.swift in Sources */,
 				D71B2589F3CDF7D0AB900E00 /* LaundryModel.swift in Sources */,
 				5AA8789BCBFC24ED9B7996D2 /* LaundryModels.swift in Sources */,
+				43CC26C00504F220F270883C /* LiveActivityState.swift in Sources */,
 				C2D0FE24DCE7AABD460AA478 /* MenuContentView.swift in Sources */,
 				C682B15BEE776754DA3F3175 /* SettingsView.swift in Sources */,
 				7163D2FF6823D211F66A485E /* SharedStore.swift in Sources */,
@@ -290,6 +493,11 @@
 			isa = PBXTargetDependency;
 			target = E586CE9D18F4B37137300F01 /* WashTowerWidgetExtension */;
 			targetProxy = CE2A713EFEE4B5B206447873 /* PBXContainerItemProxy */;
+		};
+		F7A6862D638BAEFB9A0AF5FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE8DD32476A1A7ADC264D19A /* WashTowerLiveActivity */;
+			targetProxy = 15A22DCBD20A52F6DAAD1139 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -333,7 +541,6 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -345,15 +552,32 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		5765CE8712CF0D4A22A3A67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iOS/LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).WashTower.LiveActivity";
+				PRODUCT_NAME = WashTowerLiveActivity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -362,6 +586,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,12 +600,48 @@
 			};
 			name = Release;
 		};
+		6177CFB87065161DE1BC1BA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iOS/LiveActivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).WashTower.LiveActivity";
+				PRODUCT_NAME = WashTowerLiveActivity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7813D6339784945D4E71BCBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS/App/WashTower.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).WashTower";
+				PRODUCT_NAME = WashTower;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		8C195D1E6A3B42B7E2B3A5AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,6 +658,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +711,6 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -467,13 +728,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
@@ -486,6 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +758,24 @@
 				SDKROOT = macosx;
 			};
 			name = Debug;
+		};
+		F6133160CBF0F0AAD5A0C23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS/App/WashTower.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = iOS/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).WashTower";
+				PRODUCT_NAME = WashTower;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -509,11 +789,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		9F7F30C84F4FA5CC419E7ECB /* Build configuration list for PBXNativeTarget "WashTowerLiveActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6177CFB87065161DE1BC1BA1 /* Debug */,
+				5765CE8712CF0D4A22A3A67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		A1689410017D358405AE0070 /* Build configuration list for PBXNativeTarget "WashTowerWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FDD1B9628D1B0A2A038EEF /* Debug */,
 				8C195D1E6A3B42B7E2B3A5AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E451D6B4C9C279BC91D1CA57 /* Build configuration list for PBXNativeTarget "WashTower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7813D6339784945D4E71BCBE /* Debug */,
+				F6133160CBF0F0AAD5A0C23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
