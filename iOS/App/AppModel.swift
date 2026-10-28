@@ -34,8 +34,7 @@ final class AppModel {
         }
     }
 
-    func confirmPairing() async {
-        guard let pairing = pendingPairing else { return }
+    func confirmPairing(_ pairing: RelayConfig) async {
         pendingPairing = nil
         pairing.save()
         config = pairing

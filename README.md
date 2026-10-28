@@ -7,6 +7,7 @@ A macOS desktop widget (and menu bar countdown) for LG ThinQ washers and dryers.
 - Optional menu bar countdown (`W 0:45  D 1:28`) with a dropdown for details
 - Works anywhere your Mac has internet, at home or not
 - Universal app for Apple silicon and Intel Macs on macOS 14 Sonoma or later
+- Optional [iPhone app](#iphone-live-activity) with a Live Activity on the Lock Screen, Dynamic Island and Apple Watch, started automatically when a cycle begins
 
 ## How it works
 
@@ -69,10 +70,41 @@ xattr -dr com.apple.quarantine "/Applications/WashTower Widget.app"
 
 Then paste the same token into Settings on that Mac. Each Mac talks to LG on its own.
 
+## iPhone Live Activity
+
+The iPhone app shows the countdowns as a Live Activity: on the Lock Screen, in the Dynamic Island, in the Apple Watch Smart Stack, and in the menu bar of a Mac on macOS 26 with iPhone Mirroring. It starts by itself when a cycle begins and ends when the laundry's done, even if the app isn't open.
+
+An iPhone can't poll LG in the background, so a small **relay** does it. It's a Swift server (`Relay/`) that runs on an always-on Mac. It polls ThinQ every minute and sends Live Activity pushes through Apple's push service (APNs). The phone reaches it over HTTPS, through a [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) in this setup.
+
+You'll need:
+
+- A **paid Apple Developer Program** membership. Push notifications don't work with the free Personal Team.
+- An APNs auth key, the `.p8` file. Create it at developer.apple.com › Certificates, IDs & Profiles › Keys › **+**, and tick **Apple Push Notifications service (APNs)**. Apple lets you download it only once. Keep it out of the repo (`*.p8` is git-ignored).
+- A Mac that stays on to run the relay, and a public HTTPS hostname that points at it.
+
+### Relay
+
+```bash
+cp deploy/config.env.example deploy/config.env   # then fill it in: token file, hostname, APNs key
+deploy/build.sh                                  # runs the tests, builds, stages the binary
+sudo deploy/install-service.sh                   # installs a LaunchDaemon; rerun after editing config.env
+deploy/tunnel-add-hostname.sh                    # optional: adds the hostname to an existing Cloudflare Tunnel
+deploy/status.sh                                 # daemon, health, APNs, paired phones, last poll
+```
+
+The relay listens only on `127.0.0.1`. Every API call needs the relay key, which is created on first run and handed to the phone when you pair. For builds you install from Xcode, `APNS_ENV=development` is correct.
+
+### Phone
+
+1. Put your phone's ids in `Config/device.env` (see the top of `scripts/install-phone.sh`), then run `scripts/install-phone.sh`. It installs over USB or home Wi-Fi.
+2. Run `deploy/pair.sh` on the relay Mac. It opens a QR code: scan it with the iPhone's Camera, open it in WashTower, and tap **Pair**.
+3. Send a sample activity with `~/WashTowerRelay/bin/washtower-relay test-start` (run with the `WT_*` settings, as `deploy/status.sh` does). When it appears, tap **Allow** under it on the Lock Screen. iOS won't let the relay update or end activities it started until you allow them. End the sample with `test-end`.
+
 ## Troubleshooting
 
 - **The widget isn't in the gallery.** The app must be in `/Applications` and opened at least once. Try logging out and back in.
 - **"ThinQ rejected the token."** Tokens can be revoked or expire. Create a new one and paste it into Settings.
+- **The Live Activity shows but never updates or ends.** Tap **Allow** under it on the Lock Screen, or turn on Live Activities for WashTower in Settings. Until then iOS doesn't give the app the token the relay needs. To watch the app's token handling, run `xcrun devicectl device process launch --console --device <id> <bundle id>`.
 - **Field names look wrong for your model.** `tools/washtower.py raw` dumps the raw ThinQ state from the command line, so you can check what your machine reports (`python3 tools/washtower.py --help` for setup).
 
 ## Project layout
@@ -82,6 +114,9 @@ Then paste the same token into Settings on that Mac. Each Mac talks to LG on its
 | `Shared/` | ThinQ API client, state parsing, and the App Group store used by both targets |
 | `App/` | Menu bar app: polling, settings, menu dropdown |
 | `Widget/` | WidgetKit extension |
+| `iOS/` | iPhone app and its Live Activity extension |
+| `Relay/` | Swift package for the relay server (`swift test --package-path Relay`) |
+| `deploy/` | Scripts that build, install, pair and check the relay |
 | `project.yml` | [XcodeGen](https://github.com/yonaskolb/XcodeGen) spec; the generated `.xcodeproj` is committed |
 | `tools/washtower.py` | Dependency-free Python CLI for the same API |
 

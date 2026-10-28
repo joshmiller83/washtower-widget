@@ -38,8 +38,13 @@ final class LiveActivityManager {
             }
         }
         Task {
-            for activity in Activity<LaundryActivityAttributes>.activities { observe(activity) }
-            for await activity in Activity<LaundryActivityAttributes>.activityUpdates { observe(activity) }
+            let current = Activity<LaundryActivityAttributes>.activities
+            Self.log("start: \(current.count) activit\(current.count == 1 ? "y" : "ies") running")
+            for activity in current { observe(activity) }
+            for await activity in Activity<LaundryActivityAttributes>.activityUpdates {
+                Self.log("new activity \(activity.id.prefix(8)), state \(activity.activityState)")
+                observe(activity)
+            }
         }
     }
 
@@ -60,10 +65,18 @@ final class LiveActivityManager {
     private func observe(_ activity: Activity<LaundryActivityAttributes>) {
         guard observed.insert(activity.id).inserted else { return }
         let activityID = activity.id
+        Self.log("observing \(activityID.prefix(8)); token now: \(activity.pushToken == nil ? "none" : "yes")")
         Task {
             for await token in activity.pushTokenUpdates {
-                try? await relay?.registerActivity(deviceID: deviceID, activityID: activityID, pushToken: token)
+                Self.log("update token for \(activityID.prefix(8))")
+                do {
+                    try await relay?.registerActivity(deviceID: deviceID, activityID: activityID, pushToken: token)
+                    Self.log("sent update token for \(activityID.prefix(8))\(relay == nil ? " (not paired!)" : "")")
+                } catch {
+                    Self.log("couldn't send update token: \(error)")
+                }
             }
+            Self.log("token updates ended for \(activityID.prefix(8))")
         }
         Task {
             for await state in activity.activityStateUpdates where state == .dismissed || state == .ended {
@@ -83,6 +96,11 @@ final class LiveActivityManager {
             pushType: .token
         )
         observe(activity)
+    }
+
+    /// Shows up in `devicectl device process launch --console`.
+    private static func log(_ message: String) {
+        print("[LiveActivity] \(message)")
     }
 
     func endAll() async {

@@ -14,14 +14,16 @@ struct ContentView: View {
             }
             .navigationTitle("WashTower")
         }
+        // `presenting:` hands the link to the buttons. Dismissing clears pendingPairing
+        // before a button's action runs, so the action can't read it from the model.
         .alert("Pair with this relay?", isPresented: Binding(
             get: { model.pendingPairing != nil },
             set: { if !$0 { model.pendingPairing = nil } }
-        )) {
-            Button("Pair") { Task { await model.confirmPairing() } }
-            Button("Cancel", role: .cancel) { model.pendingPairing = nil }
-        } message: {
-            Text(model.pendingPairing?.url.host() ?? "")
+        ), presenting: model.pendingPairing) { pairing in
+            Button("Pair") { Task { await model.confirmPairing(pairing) } }
+            Button("Cancel", role: .cancel) {}
+        } message: { pairing in
+            Text(pairing.url.host() ?? "")
         }
     }
 }
